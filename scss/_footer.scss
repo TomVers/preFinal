@@ -1,0 +1,62 @@
+.footer {
+      background-color: $clr3;
+      font-size: 14px;
+      display: flex;
+      padding-top: 32px;
+      padding-bottom: 20px;
+      padding-left: 2%;
+      padding-right: 2%;
+      border-top: 1px solid $clr7;
+      color: $clr2;
+      justify-content: space-between;
+
+
+      &__copyright {
+            width: 218px;
+            text-align: start;
+
+            @media (max-width: 767px) {
+                  margin-right: auto;
+                  margin-left: auto;
+                  text-align: center;
+            }
+      }
+
+      &__policy {
+            width: 214px;
+
+            @media (max-width: 767px) {
+                  width: 214px;
+                  text-align: center;
+                  margin-right: auto;
+                  margin-left: auto;
+            }
+      }
+
+      &__oferta {
+            width: 330px;
+            text-align: end;
+
+            @media (max-width: 767px) {
+                  width: 100%;
+                  text-align: center;
+                  margin-right: auto;
+                  margin-left: auto;
+            }
+
+            @media (min-width: 768px) {
+                  width: 213px;
+            }
+      }
+
+      @media (max-width: 767px) {
+            display: inline-block;
+		margin-left: 0;
+		padding-top: 16px;
+      }
+
+      @media (min-width: 1440px) {
+            float: right;
+            width: calc(100% - 320px);
+      }
+}

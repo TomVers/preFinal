@@ -1,0 +1,129 @@
+.post {
+
+      @media (max-width: 767px) {
+            padding-bottom: 15px;
+      }
+     
+      @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 24px;
+            padding-bottom: 20px;
+            line-height: 20px;
+      }
+
+      @media (min-width: 1440px) {
+            display: flex;
+		margin: 32px;
+		line-height: 20px;
+      }
+
+	&__block {
+		font-weight: 400;
+		font-size: 14px;
+		color: $clr1;
+		letter-spacing: 0.2px;
+
+            @media (min-width: 768px) {
+                  width: 312px;
+                  height: 160px;
+                  margin: 0;
+                  margin-right: auto;
+            }
+
+            @media (min-width: 1440px) {
+                  margin-right: auto;
+		      width: 490px;
+            }
+	}
+
+	&__button {
+		font-family: TT Lakes Medium;
+		color: $clr1;
+		border: 0;
+		background: 0;
+            display: flex;
+            align-items: center;
+		margin-left: 16px;
+            margin-top: 10px;
+
+            &--icon {
+                  margin-right: 10px;
+                  background: url(../img/show.svg) no-repeat;
+                  transition: 700ms;
+                  width: 7.41px;
+                  height: 10.29px;
+                  }
+
+            &::after {
+                  content: 'Читать далее';
+                  font-family: 'TT Lakes Medium';
+                  font-size: 16px;
+                  color: $clr1;
+            }
+
+            &--icon-open:after {
+                  content: 'Скрыть';
+                  font-family: 'TT Lakes Medium';
+                  color: $clr1;
+                  font-size: 16px;
+            }
+
+            @media (min-width: 1440px) {
+                  pointer-events: none;
+            }
+	}
+
+	&__info {
+		margin-bottom: 15px;
+
+            @media (max-width: 767px) {
+                  margin: 0 16px;
+            }
+	}
+
+      &__img {
+
+            @media (max-width: 767px) {
+                  width: 320px;
+                  height: 176px;
+                  padding-top: 10px;
+                  display: flex;
+                  margin-left: auto;
+                  margin-right: auto;
+                  
+            }
+
+            @media (min-width: 768px) {
+                  width: 360px;
+                  height: 208px;
+                  border-radius: 10px;
+            }
+
+            @media (min-width: 1440px) {
+                  width: 531px;
+                  height: 307px;
+                  border-radius: 10px;
+                  margin-left: auto;
+            }
+	}
+
+      &__text {
+            @media (max-width: 767px) {
+                  height: 95px;
+                  overflow: hidden;
+                  transition: 700ms;
+            }
+
+            @media (min-width: 768px) {
+                  height: 160px;
+                  overflow: hidden;
+                  transition: 700ms;
+            }
+
+            &--open {
+                  height: 230px;
+                  transition: 700ms;
+            }
+      }
+}

@@ -1,0 +1,46 @@
+@import 'zeroing';
+@import 'variables';
+@import 'fonts';
+@import 'sidebar';
+@import 'navigation';
+@import 'post';
+@import 'modal-call';
+@import 'modal-feedback';
+@import 'footer';
+@import 'brands';
+@import 'gadgets';
+@import 'price';
+@import '../../node_modules/swiper/swiper-bundle.css';
+
+
+body {
+	overflow-x: hidden;
+	width: 100vw;
+	margin: 0;
+	font-family: TT Lakes Regular;
+}
+
+.main-content {
+	background-color: $clr3;
+
+	@media (min-width: 1440px) {
+		float: right;
+		width: calc(100% - 320px);
+	}
+}
+
+.overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	display: none;
+	background-color: #FFFFFF;
+	opacity: .90;
+
+	&--active {
+		display: block;
+		z-index: 10;
+	}
+}

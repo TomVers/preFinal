@@ -1,0 +1,167 @@
+.brands {
+    overflow: hidden;
+    
+    &__title {
+        font-size: 16px;
+        font-family: TT Lakes Regular;
+        color: $clr2;
+        text-transform: uppercase;
+        letter-spacing: -0.2px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0),#fff);
+        height: 56px;
+        border-top: 1px solid $clr6;
+        padding: 16px;
+
+        @media (max-width: 767px) {
+            padding: 16px;
+            height: 80px;
+        }
+
+        @media (min-width: 768px) {
+            padding: 16px 24px;
+            margin-bottom: 24px;
+        }
+            
+        @media (min-width: 1440px) {
+            padding-left: 32px;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__link {
+
+        @media (max-width: 767px) {
+            padding: 16px;
+        }
+
+        @media (min-width: 768px) {
+            width: 224px;
+        }
+            
+        @media (min-width: 1440px) {
+            width: 240px;
+        }
+
+        &--a {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            height: 72px;
+            border: 2px solid $clr8;
+            border-radius: 10px;
+            background: url('../img/go.svg') $clr4 no-repeat;
+            background-position: 90%;
+            
+            @media (max-width: 767px) {
+                width: 240px;
+            }
+        }
+
+        &--go {
+            height: 40px;
+        }
+    }
+
+    &__all {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        margin-left: 32px;
+        background: 0;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        &--icon {
+            margin-right: 17px;
+            margin-left: 24px;
+            background: url(../img/show.svg) no-repeat;
+            transition: 700ms;
+            width: 7.41px;
+            height: 10.29px;
+        }
+
+        &::after {
+            content: 'Показать все';
+            font-family: 'TT Lakes Medium';
+            font-size: 16px;
+            color: $clr1;
+        }
+
+        &--icon-open:after {
+            content: 'Скрыть все';
+            font-family: 'TT Lakes Medium';
+            color: $clr1;
+            font-size: 16px;
+        }
+    }
+
+    &__items {
+        @media (max-width: 767px) {
+            justify-content: initial;
+            flex-wrap: nowrap;
+        }
+
+        @media (min-width: 768px) {
+            flex-wrap: wrap;
+            gap: 16px 24px;
+            width: auto;
+            margin: 0;
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+            
+        @media (min-width: 1440px) {
+            flex-wrap: wrap;
+            gap: 16px 32px;
+            width: auto;
+            margin: 0;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    }
+
+    &__container {
+        @media (max-width: 767px) {
+            width: 240px;
+        }
+
+        @media (min-width: 768px) {
+            margin-bottom: 24px;
+            max-height: 160px;
+            overflow: hidden;
+            transition: 700ms;
+        }
+            
+        @media (min-width: 1440px) {
+            margin-bottom: 24px;
+            max-height: 160px;
+            overflow: hidden;
+            transition: 700ms;
+        }
+
+        &_open {
+            max-height: 600px;
+        }
+    }
+
+}
+
+.hidden {
+    display: none;
+}
+  
+span.swiper-pagination-bullet {
+    background-color: $clr10;
+}
+span.swiper-pagination-bullet-active {
+    background-color: $clr9;
+}
+
+.brands-pagination {
+    position: absolute;
+    bottom: auto !important;
+}
